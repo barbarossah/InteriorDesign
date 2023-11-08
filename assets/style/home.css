@@ -13,8 +13,84 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts/Poppins/Poppins-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts/Poppins/Poppins-Medium.ttf");
+  font-weight: 500;
+}
+.header {
+  font-size: clamp(20px, 2.22vw, 32px);
+  font-family: Poppins;
+  padding: 1.69em 0 1.594em;
+  line-height: 1.72em;
+}
 .header .container {
   width: clamp(350px, 81.25vw, 1170px);
   margin: 0 auto;
-  border: 1px solid red;
+  display: flex;
+}
+.header__logo {
+  font-family: "Playfair Display";
+  font-size: 1em;
+  flex-grow: 1;
+  margin-top: -7px;
+}
+.header__links {
+  font-family: Poppins;
+  font-weight: 500;
+}
+.header__links ul {
+  display: flex;
+  gap: 0.938em;
+  line-height: 1.5em;
+}
+.header__links ul li {
+  font-size: 0.625em;
+  color: rgba(18, 18, 18, 0.6);
+  position: relative;
+}
+.header__links ul li div {
+  height: 2px;
+  width: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50%;
+  background-color: transparent;
+}
+.header__links ul li:hover {
+  color: #121212;
+}
+.header__links ul li:hover div {
+  background-color: #ff6a28;
+}
+.header__links ul .button {
+  border: 1px solid #ff6a28;
+  color: #ff6a28;
+  font-size: 0.9em;
+  padding: 0.62em 1.61em;
+  margin-left: 2px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: scale 0.3s ease;
+}
+.header__links ul .button:active {
+  scale: 0.95;
 }/*# sourceMappingURL=home.css.map */

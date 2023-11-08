@@ -1,8 +1,73 @@
 .header {
-  
+  font-size: clamp(20px,2.22vw,32px);
+  font-family: Poppins;
+  padding: 1.69em 0 1.594em;
+  line-height: 1.72em;
+
   .container {
     width: clamp(350px,81.25vw,1170px);
     margin: 0 auto;
-    border: 1px solid red;
+    display: flex;
+
+  }
+
+  &__logo {
+    font-family: 'Playfair Display';
+    font-size: 1em;
+    flex-grow: 1;
+    margin-top: -7px;
+  }
+
+  &__links {
+    font-family: Poppins;
+    font-weight: 500;
+    
+    ul {
+      display: flex;
+      gap: .938em;
+      line-height: 1.5em;
+
+      li {
+        font-size: 0.625em;
+        color: rgba(18, 18, 18, 0.60);
+        position: relative;
+
+        div {
+          height: 2px;
+          width: 16px;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          translate: -50%;
+          background-color: transparent;
+        }
+      }
+      
+      li:hover {
+        color: #121212;
+        
+        div {
+          background-color: #ff6a28;
+
+        }
+      }
+
+      .button {
+        border: 1px solid #ff6a28;
+        color: #ff6a28;
+        font-size: .9em;
+        padding: .62em 1.61em;
+        margin-left: 2px;
+        font-weight: 600;
+        border-radius: 5px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: scale .3s ease;
+      }
+
+      .button:active {
+        scale: .95;
+      }
+    }
   }
 }
