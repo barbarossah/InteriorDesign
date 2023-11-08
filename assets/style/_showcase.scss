@@ -1,0 +1,10 @@
+.showcase {
+  margin-top: clamp(15px,3.33vw,48px);
+
+  .container {
+    width: clamp(350px,81.25vw,1170px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}

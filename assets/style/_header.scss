@@ -12,10 +12,15 @@
   }
 
   &__logo {
-    font-family: 'Playfair Display';
-    font-size: 1em;
     flex-grow: 1;
+    font-size: 1em;
+    font-family: 'Playfair Display';
     margin-top: -7px;
+
+    a {
+      display: block;
+      margin-top: -1px;
+    }  
   }
 
   &__links {
@@ -32,6 +37,12 @@
         color: rgba(18, 18, 18, 0.60);
         position: relative;
 
+        
+        a {
+          display: block;
+          height: 48px;
+        }
+
         div {
           height: 2px;
           width: 16px;
@@ -45,6 +56,7 @@
       
       li:hover {
         color: #121212;
+        cursor: pointer;
         
         div {
           background-color: #ff6a28;

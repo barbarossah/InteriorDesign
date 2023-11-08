@@ -45,10 +45,14 @@ a {
   display: flex;
 }
 .header__logo {
-  font-family: "Playfair Display";
-  font-size: 1em;
   flex-grow: 1;
+  font-size: 1em;
+  font-family: "Playfair Display";
   margin-top: -7px;
+}
+.header__logo a {
+  display: block;
+  margin-top: -1px;
 }
 .header__links {
   font-family: Poppins;
@@ -64,6 +68,10 @@ a {
   color: rgba(18, 18, 18, 0.6);
   position: relative;
 }
+.header__links ul li a {
+  display: block;
+  height: 48px;
+}
 .header__links ul li div {
   height: 2px;
   width: 16px;
@@ -75,6 +83,7 @@ a {
 }
 .header__links ul li:hover {
   color: #121212;
+  cursor: pointer;
 }
 .header__links ul li:hover div {
   background-color: #ff6a28;
@@ -93,4 +102,14 @@ a {
 }
 .header__links ul .button:active {
   scale: 0.95;
+}
+
+.showcase {
+  margin-top: clamp(15px, 3.33vw, 48px);
+}
+.showcase .container {
+  width: clamp(350px, 81.25vw, 1170px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=home.css.map */
