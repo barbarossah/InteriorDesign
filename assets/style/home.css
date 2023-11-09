@@ -106,10 +106,79 @@ a {
 
 .showcase {
   margin-top: clamp(15px, 3.33vw, 48px);
+  font-size: clamp(32px, 4.16vw, 60px);
+  font-family: Poppins;
 }
 .showcase .container {
   width: clamp(350px, 81.25vw, 1170px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+.showcase .container > p {
+  color: rgba(18, 18, 18, 0.6);
+  font-size: 0.33em;
+  text-align: center;
+  margin: 2.1em 0;
+}
+.showcase h2 {
+  font-size: 1em;
+  text-align: center;
+  color: #121212;
+  font-family: "Playfair Display";
+}
+.showcase .button {
+  border: none;
+  background-color: #ff6a28;
+  font-size: 0.33em;
+  padding: 0.56em 1.47em;
+  margin: 0 auto;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: scale 0.3s ease;
+  width: -moz-max-content;
+  width: max-content;
+}
+.showcase .button:active {
+  scale: 0.95;
+}
+.showcase__image {
+  width: 100%;
+  height: 10.716em;
+  background-color: #c4c4c4;
+  border-radius: 10px;
+  padding: 0.467em;
+  margin-top: 0.784em;
+  position: relative;
+}
+.showcase__image_badge {
+  background-color: rgba(255, 255, 255, 0.76);
+  display: flex;
+  gap: 0.267em;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 10px;
+}
+.showcase__image_badge p:first-child {
+  font-size: 0.734em;
+  font-weight: 700;
+  color: #ff6a28;
+}
+.showcase__image_badge p:last-child {
+  font-size: 0.334em;
+  font-weight: 500;
+}
+.showcase__image .first-badge {
+  padding: 0.734em 0.967em 0.734em 0.634em;
+}
+.showcase__image .second-badge {
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+  padding: 0.734em 1.067em 0.634em 0.684em;
+}
+.showcase__image .second-badge p:last-child {
+  margin-left: 6px;
 }/*# sourceMappingURL=home.css.map */
