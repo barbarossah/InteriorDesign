@@ -200,7 +200,7 @@ a {
 }
 .showcase .container > p {
   color: rgba(18, 18, 18, 0.6);
-  font-size: 0.33em;
+  font-size: max(14px, 0.33em);
   text-align: center;
   margin: 2.1em 0;
 }
@@ -264,4 +264,50 @@ a {
 }
 .showcase__image .second-badge p:last-child {
   margin-left: 6px;
+}
+
+@media (max-width: 1040px) {
+  .showcase {
+    /* h2 {
+      font-size: .8em;
+    } */
+  }
+  .showcase .container {
+    width: 95%;
+  }
+}
+@media (max-width: 690px) {
+  .showcase .container > p {
+    text-align: justify;
+  }
+  .showcase .container > p br {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .showcase {
+    /* .container {
+
+      width: 95%;
+    } */
+  }
+  .showcase h2 {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 500px) {
+  .showcase .container {
+    width: 97%;
+  }
+  .showcase h2 {
+    font-size: 0.66em;
+  }
+}
+@media (max-width: 400px) {
+  .showcase .container {
+    width: 97%;
+  }
+  .showcase h2 {
+    font-size: 0.6em;
+  }
 }/*# sourceMappingURL=home.css.map */
