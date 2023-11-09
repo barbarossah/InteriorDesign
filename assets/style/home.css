@@ -310,4 +310,49 @@ a {
   .showcase h2 {
     font-size: 0.6em;
   }
+}
+.latest-projects {
+  font-size: clamp(20px, 4.167vw, 60px);
+  margin-top: clamp(15px, 5.833vw, 84px);
+  font-family: Poppins;
+}
+.latest-projects .container {
+  width: clamp(350px, 81.25vw, 1170px);
+  margin: 0 auto;
+}
+.latest-projects .container p {
+  font-size: 0.334em;
+  color: rgba(18, 18, 18, 0.6);
+  margin: 0 auto;
+  margin-top: 9px;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+.latest-projects .container p::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  display: block;
+  height: 2px;
+  width: 67px;
+  background-color: #ff6a28;
+  border-radius: 5px;
+}
+.latest-projects .container p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  display: block;
+  height: 2px;
+  width: 67px;
+  background-color: #ff6a28;
+  border-radius: 5px;
+}
+.latest-projects h2 {
+  text-align: center;
+  font-family: "Playfair Display";
+  font-size: 1em;
 }/*# sourceMappingURL=home.css.map */
