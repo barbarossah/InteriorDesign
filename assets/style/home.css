@@ -43,6 +43,7 @@ a {
   width: clamp(350px, 81.25vw, 1170px);
   margin: 0 auto;
   display: flex;
+  position: relative;
 }
 .header__logo {
   flex-grow: 1;
@@ -103,7 +104,89 @@ a {
 .header__links ul .button:active {
   scale: 0.95;
 }
+.header__menu-bar {
+  display: none;
+  cursor: pointer;
+  transition: scale 0.3s ease-in;
+}
+.header__menu-bar svg {
+  height: 1.5em;
+}
+.header__menu-bar:active {
+  scale: 0.7;
+}
+.header input {
+  display: none;
+}
+.header .menu-dropnav {
+  display: flex;
+  align-items: center;
+  background-color: #f8fafb;
+  border-radius: 13px;
+  overflow: hidden;
+  height: 0px;
+  transition: all 0.4s ease-out;
+  position: absolute;
+  top: 85%;
+  right: 0;
+  left: 0;
+}
+.header .menu-dropnav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0.74em;
+  line-height: 1.3em;
+  width: 100%;
+}
+.header .menu-dropnav ul .button {
+  background-color: #ff6a28;
+  color: #fff;
+  border: none;
+  font-size: 0.9em;
+  padding: 0.62em 1.61em;
+  margin-left: 2px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: scale 0.3s ease;
+}
+.header input:checked + .menu-dropnav {
+  height: 50px;
+  padding: 10px 0;
+  border: 1px solid #c4c4c4;
+}
 
+@media (max-width: 1040px) {
+  .header .container {
+    width: 95%;
+  }
+  .header__links {
+    display: none;
+  }
+  .header__menu-bar {
+    display: block;
+  }
+}
+@media (max-width: 620px) {
+  .header {
+    padding: 1.2em 0 1em;
+  }
+  .header .menu-dropnav ul {
+    justify-content: space-around;
+  }
+  .header .menu-dropnav ul li {
+    font-size: 0.82em;
+  }
+}
+@media (max-width: 480px) {
+  .header .container {
+    width: 97%;
+  }
+  .header .menu-dropnav ul li .button {
+    padding: 0.5em 1em;
+  }
+}
 .showcase {
   margin-top: clamp(15px, 3.33vw, 48px);
   font-size: clamp(32px, 4.16vw, 60px);
