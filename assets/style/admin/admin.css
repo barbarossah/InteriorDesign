@@ -1,0 +1,115 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 98vh;
+  background-color: #fff0e5;
+}
+
+.dashboard {
+  display: flex;
+  width: 80%;
+  height: 90vh;
+  border: 1px solid #121212;
+  border-radius: 5px;
+  background: #fff;
+  opacity: 90%;
+}
+.dashboard__sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  border-right: 5px solid #121212;
+  border-radius: 0 15px 15px 0;
+  color: #000;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+.dashboard__sections_item {
+  font-size: 32px;
+  padding: 15px;
+  cursor: pointer;
+  border: 1px solid #121212;
+  border-radius: 20px;
+  transition: scale 0.2s linear;
+}
+.dashboard__sections_item:hover {
+  border-bottom: 5px solid #121212;
+}
+.dashboard__sections_item:active {
+  scale: 0.95;
+}
+
+.dashboard__panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+  overflow-y: auto;
+}
+.dashboard__panel_form legend {
+  font-size: 22px;
+}
+.dashboard__panel_form label {
+  font-size: 18px;
+}
+.dashboard__panel_form input {
+  display: inline-block;
+  padding: 5px;
+  font-size: 18px;
+}
+.dashboard__panel_form input:last-child {
+  float: right;
+}
+.dashboard__panel_form textarea {
+  font-size: 18px;
+  display: block;
+  padding: 15px;
+}
+.dashboard__panel_table {
+  margin-top: 50px;
+  width: 78%;
+  border-collapse: collapse;
+}
+.dashboard__panel_table th:first-child {
+  border: 1px solid;
+  width: 60%;
+}
+.dashboard__panel_table th:last-child {
+  border: 1px solid;
+}
+
+.dashboard__panel_table_body_td {
+  font-size: 20px;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid;
+}
+
+.dashboard__panel_table_body_option {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  border: 1px solid;
+  padding: 8.25px;
+  border-top: 0;
+  border-left: 0;
+}
+.dashboard__panel_table_body_option div {
+  border: 1px solid;
+  border-radius: 24px;
+  padding: 5px 10px;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+.dashboard__panel_table_body_option .delete:hover {
+  background-color: #ff5f5f;
+}
+.dashboard__panel_table_body_option .edit:hover {
+  background-color: #9de52e;
+}/*# sourceMappingURL=admin.css.map */

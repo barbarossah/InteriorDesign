@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="./assets/style/admin/admin.css">
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="dashboard__sections">
+      <h2>
+        Sections
+      </h2>
+      <p class="dashboard__sections_item">
+        The Latest Projects
+      </p>
+
+    </aside>
+
+    <div class="dashboard__panel">
+      <h2>
+        Admin Dashboard.
+      </h2>
+      <form class="dashboard__panel_form" action="#\">
+        <fieldset>
+          <legend>Update elements.</legend> <br>
+          <label for="title">Title:</label> <br>
+          <input class="Title" id="title" type="text"> 
+          <br>
+          <br>
+          <label for="text">Specification:</label> <br>
+          <textarea class="specification" id="text" rows="12" cols="60" placeholder="Specification..."></textarea>
+          <br>
+          <br>
+          <label for="image"></label>
+          <input class="image" id="image" type="file">
+
+          <input class="add-btn" type="submit" value="Добавить">
+        </fieldset>
+      </form>
+
+      <table class="dashboard__panel_table">
+        <thead>
+          <tr>
+            <th>Items</th>
+            <th>Option</th>
+          </tr>
+        </thead>
+        <tbody class="dashboard__panel_table_body">
+
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
