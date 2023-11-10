@@ -81,6 +81,7 @@ a {
   left: 50%;
   translate: -50%;
   background-color: transparent;
+  transition: all 0.6s ease;
 }
 .header__links ul li:hover {
   color: #121212;
@@ -88,6 +89,7 @@ a {
 }
 .header__links ul li:hover div {
   background-color: #ff6a28;
+  transform: scaleX(5);
 }
 .header__links ul .button {
   border: 1px solid #ff6a28;
@@ -267,11 +269,6 @@ a {
 }
 
 @media (max-width: 1040px) {
-  .showcase {
-    /* h2 {
-      font-size: .8em;
-    } */
-  }
   .showcase .container {
     width: 95%;
   }
@@ -285,12 +282,6 @@ a {
   }
 }
 @media (max-width: 620px) {
-  .showcase {
-    /* .container {
-
-      width: 95%;
-    } */
-  }
   .showcase h2 {
     font-size: 0.8em;
   }
@@ -320,7 +311,7 @@ a {
   width: clamp(350px, 81.25vw, 1170px);
   margin: 0 auto;
 }
-.latest-projects .container p {
+.latest-projects .container > p {
   font-size: 0.334em;
   color: rgba(18, 18, 18, 0.6);
   margin: 0 auto;
@@ -329,7 +320,7 @@ a {
   width: -moz-max-content;
   width: max-content;
 }
-.latest-projects .container p::before {
+.latest-projects .container > p::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -340,7 +331,7 @@ a {
   background-color: #ff6a28;
   border-radius: 5px;
 }
-.latest-projects .container p::after {
+.latest-projects .container > p::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -355,4 +346,45 @@ a {
   text-align: center;
   font-family: "Playfair Display";
   font-size: 1em;
+}
+
+.latest-projects__items {
+  margin-top: 1.34em;
+}
+
+.latest-projects__items_item {
+  display: flex;
+  gap: 1em;
+}
+.latest-projects__items_item > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+.latest-projects__items_item > div h3 {
+  font-size: 0.834em;
+  font-weight: 600;
+}
+.latest-projects__items_item > div p {
+  font-size: 0.4em;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 1.91;
+  margin: 0.8em 0;
+}
+.latest-projects__items_item > div img {
+  translate: 0 -15%;
+  border-radius: 10.2px;
+  width: clamp(15px, 40.07vw, 577px);
+  justify-self: flex-start;
+}
+
+.latest-projects__items_item:nth-child(even) > div:first-child {
+  order: 2;
+}
+
+.latest-projects__items_item:not(:first-child) {
+  margin-top: 1.7em;
 }/*# sourceMappingURL=home.css.map */

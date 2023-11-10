@@ -36,7 +36,6 @@
         font-size: 0.625em;
         color: rgba(18, 18, 18, 0.60);
         position: relative;
-
         
         a {
           display: block;
@@ -51,6 +50,8 @@
           left: 50%;
           translate: -50%;
           background-color: transparent;
+          transition: all .6s ease;
+
         }
       }
       
@@ -60,6 +61,7 @@
         
         div {
           background-color: #ff6a28;
+          transform: scaleX(5);
 
         }
       }

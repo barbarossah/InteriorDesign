@@ -4,7 +4,7 @@ let specification = document.querySelector('.specification');
 let imageInput = document.querySelector('.image');
 let addButton = document.querySelector('.add-btn');
 let table = document.querySelector('.dashboard__panel_table_body');
-// let itemsList = [];
+
 
 //check
 
@@ -14,11 +14,6 @@ if (itemsList.length) {
   showElements();
 }
 
-/* ============== index.html  =================== */
-
-let items = document.querySelector('.latest-projects__items');
-
-/* ============== index.html  =================== */
 
 function showElements() {
   table.innerHTML = '';
@@ -35,6 +30,8 @@ function showElements() {
   } 
 }
 
+
+
 addButton.addEventListener('click', () => {
 // && imageInput.value  
 // && specification.value.trim()
@@ -46,32 +43,17 @@ addButton.addEventListener('click', () => {
     localStorage.setItem('storageList', JSON.stringify(itemsList));
     
     
-    showElements();
     userTitle.value = '';
     specification.value = '';
     imageInput.value = '';
   }
-    
-    // parsedList = JSON.parse(localStorage.getItem('itemsList'));
-    // console.log(parsedList);
-    
 
-  
+  showElements();
     
+  
   
 });
 
 
-// JSON.parse(localStorage.getItem('itemsList'));
 
 
-// items.innerHTML = '';
-
-
-// for (let i in itemsList) {
-
-//   items.innerHTML += `<div><div style='font-size: 35px'>${itemsList[i].title}</div>
-//   <div'>
-//   </div>
-//   </div>`;
-// }
