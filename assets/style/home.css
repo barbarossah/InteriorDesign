@@ -357,11 +357,12 @@ a {
   gap: 1em;
 }
 .latest-projects__items_item > div {
-  width: 50%;
+  width: 49%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;
+  overflow: hidden;
 }
 .latest-projects__items_item > div h3 {
   font-size: 0.834em;
@@ -375,9 +376,11 @@ a {
   margin: 0.8em 0;
 }
 .latest-projects__items_item > div img {
-  translate: 0 -15%;
   border-radius: 10.2px;
-  width: clamp(15px, 40.07vw, 577px);
+  -o-object-fit: 100%;
+     object-fit: 100%;
+  width: 100%;
+  height: clamp(15px, 38vw, 430px);
   justify-self: flex-start;
 }
 

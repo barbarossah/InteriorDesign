@@ -60,11 +60,13 @@
   
   
   & > div {
-    width: 50%;
+    width: 49%;
+    // height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
+    overflow: hidden;
 
     h3 {
       font-size: .834em;
@@ -80,10 +82,13 @@
     }
 
     img {
-      translate: 0 -15%;
+      // translate: 0 -15%;
       border-radius: 10.2px;
-      // object-fit: cover;
-      width: clamp(15px,40.07vw,577px);
+      object-fit: 100%;
+      width: 100%;
+      // height: 100%;
+      // width: clamp(15px,40.07vw,540px);
+      height: clamp(15px,38vw,430px);
       justify-self: flex-start;
     }
   }

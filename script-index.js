@@ -6,22 +6,33 @@ if (itemsList.length) {
   showProjectItems();
 }
 
+{/* <img src='${itemsList[i].image}' alt=''></img> */}
 function showProjectItems() {
+  /* let imgAdress = '';
+  let imgSplit = '';
+  let imageCorrection = ''; */
   items.innerHTML = '';
-  //${itemsList[i].title}
-  //${itemsList[i].specification}
-  //${itemsList[i].image}
   for (let i in itemsList) {
+    /* imgAdress = itemsList[i].image;
+    imgSplit = imgAdress.split('');
+    for (let j = 0; j < imgAdress.length; ++j) {
+      if (j >= 12) {
+        imageCorrection.push(imgAdress[j]);
+      }
+    }
+    console.log(imageCorrection); */
+    
     items.innerHTML += `<div class='latest-projects__items_item'>
       <div>
-        <h3 class='latest-projects__items_item__left_title'>The Tropical 
-        Workspace Style</h3>
-        <p>Tropical style is all about comfort, ease and utility and is eclectic by definition. The style is characterized by warm and colors drawn mostly from lighting.
-        </p>
+        <h3 class='latest-projects__items_item__left_title'>${itemsList[i].title}
+        </h3>
+        <p>${itemsList[i].specification}</p>
       </div>
-      <div class='latest-projects__items_item'>
-        <img src='./assets/media/picture-16.jpg' alt='picture'>
+      <div>
+        
+        <img src='./assets/media/${itemsList[i].image}' alt=''>
       </div>
     </div>`;
   }
+
 }

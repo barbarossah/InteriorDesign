@@ -24,14 +24,14 @@ body {
     flex-direction: column;
     align-items: center;
     width: 25%;
-    border-right: 5px solid #121212;
+    border-right: 3px solid #121212;
     border-radius: 0 15px 15px 0;
     color: #000;
     backdrop-filter: blur(15px);
 
 
     &_item {
-      font-size: 32px;
+      font-size: 28px;
       padding: 15px;
       cursor: pointer;
       border: 1px solid #121212;
@@ -88,12 +88,19 @@ body {
       padding: 15px;
     }
 
+    .hidden {
+      display: none;
+    }
+
+    .Title {
+      width: 98%;
+    }
 
   }
 
   &_table {
     margin-top: 50px;
-    width: 78%;
+    width: 681px;
     border-collapse: collapse;
 
     th:first-child {
@@ -112,35 +119,47 @@ body {
 .dashboard__panel_table_body_td {
   font-size: 20px;
   text-align: center;
-  padding: 8px;
+  height: 50px;
   border: 1px solid;
 }
 
 .dashboard__panel_table_body_option {
   display: flex;
-  gap: 40px;
-  justify-content: center;
+  // gap: 40px;
+  justify-content: space-around;
+  align-items: center;
   border: 1px solid; 
-  padding: 8.25px;
+  height: 53.5px;
   border-top: 0;
   border-left: 0;
 
-  div {
+  & > * {
+    // vertical-align: middle;
     border: 1px solid;
     border-radius: 24px;
     padding: 5px 10px;
     width: max-content;
-    text-align: center;
+    height: min-content;
+    // text-align: center;
     cursor: pointer;
     font-size: 20px;
   }
 
+  // div {
+    
+  // }
+
   .delete:hover {
-    background-color: #ff5f5f;
+    color: #ff5f5f;
+    border: 2px solid;
+
   }
   
   .edit:hover {
-    background-color: #9de52e;
+    color: #6dac0f;
+    border: 2px solid;
+
   }
 
 }
+
