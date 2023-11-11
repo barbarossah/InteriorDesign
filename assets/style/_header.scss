@@ -1,8 +1,208 @@
 .header {
-  
+  font-size: clamp(20px,2.22vw,32px);
+  font-family: Poppins;
+  padding: 1.69em 0 1.594em;
+  line-height: 1.72em;
+
   .container {
     width: clamp(350px,81.25vw,1170px);
     margin: 0 auto;
-    border: 1px solid red;
+    display: flex;
+    position: relative;
   }
+
+  &__logo {
+    flex-grow: 1;
+    font-size: 1em;
+    font-family: 'Playfair Display';
+    margin-top: -7px;
+
+    a {
+      display: block;
+      margin-top: -1px;
+    }  
+  }
+
+  &__links {
+    font-family: Poppins;
+    font-weight: 500;
+    
+    ul {
+      display: flex;
+      gap: .938em;
+      line-height: 1.5em;
+
+      li {
+        font-size: 0.625em;
+        color: rgba(18, 18, 18, 0.60);
+        position: relative;
+        
+        a {
+          display: block;
+          height: 48px;
+        }
+
+        div {
+          height: 2px;
+          width: 16px;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          translate: -50%;
+          background-color: transparent;
+          transition: all .6s ease;
+
+        }
+      }
+      
+      li:hover {
+        color: #121212;
+        cursor: pointer;
+        
+        div {
+          background-color: #ff6a28;
+          transform: scaleX(5);
+
+        }
+      }
+
+      .button {
+        border: 1px solid #ff6a28;
+        color: #ff6a28;
+        font-size: .9em;
+        padding: .62em 1.61em;
+        margin-left: 2px;
+        font-weight: 600;
+        border-radius: 5px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: scale .3s ease;
+      }
+
+      .button:active {
+        scale: .95;
+      }
+    }
+  }
+
+  &__menu-bar {
+    display: none;
+    cursor: pointer;
+    transition: scale .3s ease-in;
+
+    svg {
+      height: 1.5em;
+    }
+
+  }
+
+  &__menu-bar:active {
+    scale: .70;
+  }
+
+  input {
+    display: none;
+  }
+
+  .menu-dropnav {
+    display: flex;
+    align-items: center;
+    background-color: #f8fafb;
+    border-radius: 13px;
+    overflow: hidden;
+    height: 0px;
+    transition: all .4s ease-out;
+    position: absolute;
+    top: 85%;
+    right: 0;
+    left: 0;
+
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: .74em;
+      line-height: 1.3em;
+      width: 100%;      
+
+      .button {
+        background-color: #ff6a28;
+        color: #fff;
+        border: none;
+        font-size: .9em;
+        padding: .62em 1.61em;
+        margin-left: 2px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: scale .3s ease;
+      }
+    }
+  }
+  
+  input:checked + .menu-dropnav {
+    height: 50px;
+    padding: 10px 0;
+    border: 1px solid #c4c4c4;
+    
+  }
+}
+
+@media (max-width: 1040px) {
+  .header {
+
+    .container {
+      width: 95%;
+    }
+
+    &__links {
+      display: none;
+    }
+
+    &__menu-bar {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+
+  .header {
+    padding: 1.2em 0 1em;
+
+    .menu-dropnav {
+
+      ul {
+        justify-content: space-around;
+
+        li {
+          font-size: .820em;
+
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+
+    .container {
+      width: 97%;
+    }
+    .menu-dropnav {
+
+      ul {
+
+        li {
+
+          .button {
+            padding: .5em 1em;
+          }
+        }
+      }
+    }
+  }
+
 }

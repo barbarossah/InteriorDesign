@@ -1,0 +1,163 @@
+.showcase {
+  margin-top: clamp(15px,3.33vw,48px);
+  font-size: clamp(32px,4.16vw,60px);
+  font-family: Poppins;
+
+  .container {
+    width: clamp(350px,81.25vw,1170px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+
+    & > p {
+      color: rgba(18, 18, 18, 0.60);
+      font-size: max(14px,.33em);
+      text-align: center;
+      margin: 2.1em 0;
+
+
+    }
+  }
+
+  h2 {
+    font-size: 1em;
+    text-align: center;
+    color: #121212;
+    font-family: 'Playfair Display';
+  }
+
+  .button {
+    border: none;
+    background-color: #ff6a28;
+    font-size: .33em;
+    padding: .56em 1.47em;
+    margin: 0 auto;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: scale .3s ease;
+    width: max-content;
+
+  }
+
+  .button:active {
+    scale: .95;
+  }
+
+  &__image {
+    width: 100%;
+    height: 10.716em;
+    background-color: #c4c4c4;
+    border-radius: 10px;
+    padding: .467em;
+    margin-top: .784em;
+    position: relative;
+
+
+    &_badge {
+      background-color: rgba(255,255,255,.76);
+      display: flex;
+      gap: .267em;
+      width: max-content;
+      border-radius: 10px;
+
+      p:first-child {
+        font-size: .734em;
+        font-weight: 700;
+        color: #ff6a28;
+
+      }
+
+      p:last-child {
+        font-size: .334em;
+        font-weight: 500;
+      }
+    }
+
+    .first-badge {
+      padding: .734em .967em .734em .634em;
+    }
+
+    .second-badge {
+      position: absolute;
+      bottom: 28px;
+      right: 28px;
+      padding: .734em 1.067em .634em .684em;
+
+      p:last-child {
+        margin-left: 6px;
+      } 
+    }
+  }
+  
+}
+
+@media (max-width: 1040px) {
+
+  .showcase {
+
+    .container {
+      
+      width: 95%;
+      
+      
+    }
+  }
+}
+
+@media (max-width:690px) {
+  .showcase {
+
+    .container {
+
+      & > p {
+        text-align: justify;
+  
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .showcase {
+
+    h2 {
+      font-size: .8em;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .showcase {
+
+    .container {
+      
+      width: 97%;
+    }
+
+    h2 {
+      font-size: .66em;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .showcase {
+    // font-size: clamp(18px,4.16vw,60px);
+
+
+    .container {
+      
+      width: 97%;
+    }
+
+    h2 {
+      font-size: .6em;
+    }
+  }
+}

@@ -1,0 +1,165 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 98vh;
+  background-color: #fff0e5;
+  // background: rgb(127,44,200);
+  // background: linear-gradient(60deg, rgba(127,44,200,0.9949229691876751) 7%, rgba(41,86,241,1) 44%, rgba(41,207,226,1) 100%);
+  // backdrop-filter: blur(20px);
+  // padding: 120px;
+}
+
+.dashboard {
+  display: flex;
+  width: 80%;
+  height: 90vh;
+  border: 1px solid #121212;
+  border-radius: 5px;
+  background: #fff;
+  opacity: 90%;
+  // background-color: ;
+  &__sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    border-right: 3px solid #121212;
+    border-radius: 0 15px 15px 0;
+    color: #000;
+    backdrop-filter: blur(15px);
+
+
+    &_item {
+      font-size: 28px;
+      padding: 15px;
+      cursor: pointer;
+      border: 1px solid #121212;
+      border-radius: 20px;
+      transition: scale .2s linear;
+    }
+    
+    &_item:hover {
+      border-bottom: 5px solid #121212;
+    }
+    
+    &_item:active {
+      scale: .95;
+    }
+    
+  }
+
+}
+
+
+
+.dashboard__panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+  overflow-y: auto;
+
+  &_form {
+
+    legend {
+      font-size: 22px;
+    }
+
+    label {
+      font-size: 18px;
+    }
+
+    input {
+      display: inline-block;
+      padding: 5px;
+      font-size: 18px;
+    }
+
+    input:last-child {
+      float: right;
+      
+    }
+    
+    textarea {
+      font-size: 18px;
+      display: block;
+      padding: 15px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .Title {
+      width: 98%;
+    }
+
+  }
+
+  &_table {
+    margin-top: 50px;
+    width: 681px;
+    border-collapse: collapse;
+
+    th:first-child {
+      border: 1px solid;
+      width: 60%;
+    }
+
+    th:last-child {
+      border: 1px solid;
+    }
+  }
+
+
+}
+
+.dashboard__panel_table_body_td {
+  font-size: 20px;
+  text-align: center;
+  height: 50px;
+  border: 1px solid;
+}
+
+.dashboard__panel_table_body_option {
+  display: flex;
+  // gap: 40px;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid; 
+  height: 53.5px;
+  border-top: 0;
+  border-left: 0;
+
+  & > * {
+    // vertical-align: middle;
+    border: 1px solid;
+    border-radius: 24px;
+    padding: 5px 10px;
+    width: max-content;
+    height: min-content;
+    // text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  // div {
+    
+  // }
+
+  .delete:hover {
+    color: #ff5f5f;
+    border: 2px solid;
+
+  }
+  
+  .edit:hover {
+    color: #6dac0f;
+    border: 2px solid;
+
+  }
+
+}
+

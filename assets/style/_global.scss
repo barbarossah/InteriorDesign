@@ -13,3 +13,27 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url('../fonts/Poppins/Poppins-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url('../fonts/Poppins/Poppins-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url('../fonts/Poppins/Poppins-Medium.ttf');
+  font-weight: 500;
+}
