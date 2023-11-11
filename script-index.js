@@ -6,21 +6,10 @@ if (itemsList.length) {
   showProjectItems();
 }
 
-{/* <img src='${itemsList[i].image}' alt=''></img> */}
 function showProjectItems() {
-  /* let imgAdress = '';
-  let imgSplit = '';
-  let imageCorrection = ''; */
+
   items.innerHTML = '';
   for (let i in itemsList) {
-    /* imgAdress = itemsList[i].image;
-    imgSplit = imgAdress.split('');
-    for (let j = 0; j < imgAdress.length; ++j) {
-      if (j >= 12) {
-        imageCorrection.push(imgAdress[j]);
-      }
-    }
-    console.log(imageCorrection); */
     
     items.innerHTML += `<div class='latest-projects__items_item'>
       <div>
