@@ -2,16 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-li {
-  list-style: none;
-
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  font-family: Poppins;
 }
 
 @font-face {
@@ -37,3 +28,24 @@ a {
   src: url('../fonts/Poppins/Poppins-Medium.ttf');
   font-weight: 500;
 }
+
+li {
+  list-style: none;
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.cont {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+}
+
