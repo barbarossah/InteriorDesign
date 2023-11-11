@@ -390,4 +390,327 @@ a {
 
 .latest-projects__items_item:not(:first-child) {
   margin-top: 1.7em;
+}
+
+.form {
+  width: 100%;
+  padding: 0 135px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f8fafb;
+  gap: 63px;
+  height: 822px;
+  margin-bottom: 306px;
+}
+.form .left .title {
+  color: #121212;
+  margin-top: 191px;
+  /* H1 */
+  font-family: Playfair Display;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.form .left .d {
+  color: rgba(18, 18, 18, 0.83);
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 191%; /* 45.84px */
+  margin-top: 72px;
+  margin-bottom: 72px;
+}
+.form .left hr {
+  width: 312px;
+  height: 4px;
+  background-color: #ff6a28;
+  border: none;
+}
+.form .right {
+  padding: 60px 38px 40px 38px;
+  background-color: white;
+  width: 585px;
+  height: 913px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: #fff;
+  transform: translateY(42px);
+  box-shadow: 0px 1px 10px lightgray;
+}
+.form .right label {
+  margin-bottom: 4px;
+  color: rgba(18, 18, 18, 0.83);
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 191%; /* 45.84px */
+}
+.form .right input {
+  margin-bottom: 34px;
+  border-radius: 8px;
+  background: var(--secondary, #f8fafb);
+  border: none;
+  color: rgba(18, 18, 18, 0.5);
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 191%; /* 38.2px */
+  padding: 31px 34px;
+  width: 510px;
+}
+.form .right button {
+  border-radius: 5px;
+  background: #ff6a28;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: inline-flex;
+  padding: 11px 39px;
+  align-items: flex-start;
+  gap: 10px;
+  float: right;
+  width: 152px;
+  border: none;
+  margin: 0 0 0 auto;
+}
+
+.footer {
+  padding: 0 135px 85px 135px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .left .logo {
+  color: #121212;
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 191%; /* 45.84px */
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  margin-bottom: 18px;
+}
+.footer .left .logo hr {
+  width: 130px;
+  height: 1px;
+  border: none;
+  background-color: #ff6a28;
+}
+.footer .left .d {
+  color: rgba(18, 18, 18, 0.5);
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 191%; /* 38.2px */
+  margin-bottom: 38px;
+  width: 449px;
+}
+.footer .left form {
+  margin-bottom: 140px;
+  position: relative;
+  width: 494px;
+  height: 78px;
+  flex-shrink: 0;
+}
+.footer .left form input {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: var(--secondary, #f8fafb);
+  border: none;
+  color: rgba(18, 18, 18, 0.5);
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 191%; /* 38.2px */
+  padding: 20px 29px;
+}
+.footer .left form button {
+  position: absolute;
+  top: 13px;
+  bottom: 13px;
+  right: 17px;
+  display: flex;
+  width: 138px;
+  padding: 11px 39px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #ff6a28;
+  border: none;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+}
+.footer .left a {
+  color: rgba(18, 18, 18, 0.5);
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 191%; /* 38.2px */
+}
+.footer .right {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 48%;
+}
+.footer .right ul :first-child {
+  margin-bottom: 12px;
+}
+.footer .right ul li {
+  color: #121212;
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 191%; /* 45.84px */
+  margin-bottom: 16px;
+}
+.footer .right ul a {
+  color: rgba(18, 18, 18, 0.5);
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 191%; /* 38.2px */
+  margin-bottom: 16px;
+}
+.footer .right .copy {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 33px;
+  color: rgba(18, 18, 18, 0.5);
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 191%; /* 38.2px */
+}
+
+@media (max-width: 1110px) {
+  .form {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 30px;
+  }
+  .form .right {
+    width: 100%;
+    transform: none;
+  }
+  .form .right input {
+    width: 100%;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .left a {
+    display: none;
+  }
+  .footer .right {
+    width: 100%;
+  }
+  .footer .right .copy {
+    display: none;
+  }
+}
+@media (max-width: 590px) {
+  .form {
+    padding: 0 40px;
+  }
+  .form .left hr {
+    width: 100%;
+  }
+  .form .left .title {
+    font-size: 40px;
+    margin-top: 50px;
+  }
+  .form .left .d {
+    font-size: 18px;
+  }
+  .form .right label {
+    font-size: 18px;
+  }
+  .form .right input {
+    font-size: 14px;
+  }
+  .form .right button {
+    width: 100%;
+    margin: 0;
+    font-size: 18px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer {
+    padding: 0 50px 50px 50px;
+  }
+  .footer .left .logo hr {
+    display: none;
+  }
+  .footer .left .d {
+    width: 100%;
+  }
+  .footer .left form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .footer .left form input {
+    width: 100%;
+  }
+  .footer .left form button {
+    width: 100%;
+    position: static;
+  }
+  .footer .right {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .right ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=home.css.map */

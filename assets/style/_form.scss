@@ -1,0 +1,101 @@
+.form {
+  width: 100%;
+  padding: 0 135px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f8fafb;
+  gap: 63px;
+  height: 822px;
+  margin-bottom: 306px;
+
+  .left {
+    .title {
+      color: #121212;
+      margin-top: 191px;
+      /* H1 */
+      font-family: Playfair Display;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .d {
+      color: rgba(18, 18, 18, 0.83);
+      text-align: justify;
+      font-family: Poppins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 191%; /* 45.84px */
+      margin-top: 72px;
+      margin-bottom: 72px;
+    }
+
+    hr {
+      width: 312px;
+      height: 4px;
+      background-color: #ff6a28;
+      border: none;
+    }
+  }
+
+  .right {
+    padding: 60px 38px 40px 38px;
+    background-color: white;
+    width: 585px;
+    height: 913px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: #fff;
+    transform: translateY(42px);
+    box-shadow: 0px 1px 10px lightgray;
+
+    label {
+      margin-bottom: 4px;
+      color: rgba(18, 18, 18, 0.83);
+      text-align: justify;
+      font-family: Poppins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 191%; /* 45.84px */
+    }
+
+    input {
+      margin-bottom: 34px;
+      border-radius: 8px;
+      background: var(--secondary, #f8fafb);
+      border: none;
+      color: rgba(18, 18, 18, 0.5);
+      text-align: justify;
+      font-family: Poppins;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 191%; /* 38.2px */
+      padding: 31px 34px;
+      width: 510px;
+    }
+
+    button {
+      border-radius: 5px;
+      background: #ff6a28;
+      color: #fff;
+      font-family: Poppins;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      display: inline-flex;
+      padding: 11px 39px;
+      align-items: flex-start;
+      gap: 10px;
+      float: right;
+      width: 152px;
+      border: none;
+      margin: 0 0 0 auto;
+    }
+  }
+}
