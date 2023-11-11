@@ -22,7 +22,7 @@ function showElements() {
     
     table.innerHTML += `<tr><td class='dashboard__panel_table_body_td'>${itemsList[i].title}</td>
       <td class='dashboard__panel_table_body_option'>
-        <div class='edit'>Edit</div>
+        <div onclick='editItem(${i})' class='edit'>Edit</div>
         <div onclick='deleteItem(${i})' class='delete'>Delete</div>
       </td>
     </tr>`;
@@ -34,26 +34,29 @@ function setToLocal() {
   localStorage.setItem('storageList', JSON.stringify(itemsList));
 }
 
+
+
 function deleteItem(id) {
   itemsList.splice(id, 1)
   setToLocal();
   showElements();
 }
 
-
-
-
+function editItem(index) {
+  userTitle.value = `${itemsList[index].title}`;
+  specification.value = `${itemsList[index].specification}`;
+  imageInput.value = `${itemsList[index].image}`;
+}
 
 addButton.addEventListener('click', () => {
-// && imageInput.value  
-// && specification.value.trim()
+
   // e.preventDefault();
   window.location.reload(true);
-  if (userTitle.value.trim()) {
-
+  if (userTitle.value.trim() && specification.value.trim() && imageInput.value) {
+  
     let str = imageInput.value;
     let arr = [];
-
+  
     for (let i=0;i<str.length;i++) {
       if (i > 11) {
         arr.push(str[i]);
@@ -61,6 +64,27 @@ addButton.addEventListener('click', () => {
     }
 
     let jointStr = arr.join('');
+
+    itemsList.push({title:[userTitle.value], specification:[specification.value], image:[jointStr]});
+    
+    setToLocal();
+    
+    showElements();
+    
+    userTitle.value = '';
+    specification.value = '';
+    imageInput.value = '';
+  }
+
+    
+  
+  
+});
+
+
+// editItem();
+
+
     // imageInput.addEventListener("load", function () {
     //   let imgCanvas = document.createElement("canvas"),
     //       imgContext = imgCanvas.getContext("2d");
@@ -84,23 +108,3 @@ addButton.addEventListener('click', () => {
     //       console.log("Storage failed: " + e);
     //   } */
     // }, false); 
-
-    itemsList.push({title:[userTitle.value], specification:[specification.value], image:[jointStr]});
-    
-    setToLocal();
-    
-    showElements();
-    
-    userTitle.value = '';
-    specification.value = '';
-    imageInput.value = '';
-  }
-
-    
-  
-  
-});
-
-
-
-

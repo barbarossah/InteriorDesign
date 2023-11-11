@@ -1,4 +1,4 @@
-let str = 'C:\fakepath\picture-16.jpg';
+/* let str = 'C:\fakepath\picture-16.jpg';
 let arr = [];
 
 for (let i=0;i<str.length;i++) {
@@ -9,4 +9,7 @@ for (let i=0;i<str.length;i++) {
 
 let jointStr = arr.join('');
 
-console.log(jointStr);
+console.log(jointStr); */
+
+let itemsList = JSON.parse(localStorage.getItem('storageList')) ? JSON.parse(localStorage.getItem('storageList')) : [];
+
