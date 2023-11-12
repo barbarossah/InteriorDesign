@@ -123,4 +123,8 @@ body {
 .dashboard__panel_table_body_option .edit:hover {
   color: #6dac0f;
   border: 2px solid;
+}
+
+.red-border {
+  border: 2px solid red;
 }/*# sourceMappingURL=admin.css.map */

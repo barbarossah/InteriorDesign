@@ -16,6 +16,12 @@ if (itemsList.length) {
   showElements();
 }
 
+if (!saveButton.classList.contains('hidden')) {
+  addButton.addEventListener('change', () => {
+    addButton.disabled = true;
+  });
+}
+
 function showElements() {
   table.innerHTML = "";
   for (let i in itemsList) {
@@ -51,6 +57,13 @@ function editItem(index) {
 
 saveButton.addEventListener("click", () => {
   // location.reload();
+
+  if (!imageInput.value) {
+    imageInput.classList.add('red-border');
+    
+  } 
+
+
   if (
     userTitle.value.trim() &&
     specification.value.trim() &&
@@ -70,13 +83,19 @@ saveButton.addEventListener("click", () => {
     itemsList[indexForEdit].title = userTitle.value;
     itemsList[indexForEdit].specification = specification.value;
     itemsList[indexForEdit].image = jointStr;
-  }
-    setToLocal();
-    showElements();
+
     userTitle.value = '';
     specification.value = '';
     imageInput.value = '';
     saveButton.classList.add("hidden");
+    imageInput.classList.remove('red-border');
+  }
+  
+  
+
+  setToLocal();
+  showElements();
+    
 });
 
 /* document.getElementsByClassName('image').addEventListener('change', function(){
@@ -91,6 +110,12 @@ saveButton.addEventListener("click", () => {
 addButton.addEventListener("click", () => {
   // e.preventDefault();
   // window.location.reload(true);
+
+  if (!imageInput.value) {
+    imageInput.classList.add('red-border');
+    
+  }
+
   if (
     userTitle.value.trim() &&
     specification.value.trim() &&
@@ -120,6 +145,8 @@ addButton.addEventListener("click", () => {
     userTitle.value = "";
     specification.value = "";
     imageInput.value = "";
+    imageInput.classList.remove('red-border');
+
   }
 });
 
