@@ -16,8 +16,8 @@ if (itemsList.length) {
   showElements();
 }
 
-if (!saveButton.classList.contains('hidden')) {
-  addButton.addEventListener('change', () => {
+if (!saveButton.classList.contains("hidden")) {
+  addButton.addEventListener("change", () => {
     addButton.disabled = true;
   });
 }
@@ -59,10 +59,8 @@ saveButton.addEventListener("click", () => {
   // location.reload();
 
   if (!imageInput.value) {
-    imageInput.classList.add('red-border');
-    
-  } 
-
+    imageInput.classList.add("red-border");
+  }
 
   if (
     userTitle.value.trim() &&
@@ -84,18 +82,15 @@ saveButton.addEventListener("click", () => {
     itemsList[indexForEdit].specification = specification.value;
     itemsList[indexForEdit].image = jointStr;
 
-    userTitle.value = '';
-    specification.value = '';
-    imageInput.value = '';
+    userTitle.value = "";
+    specification.value = "";
+    imageInput.value = "";
     saveButton.classList.add("hidden");
-    imageInput.classList.remove('red-border');
+    imageInput.classList.remove("red-border");
   }
-  
-  
 
   setToLocal();
   showElements();
-    
 });
 
 /* document.getElementsByClassName('image').addEventListener('change', function(){
@@ -112,14 +107,16 @@ addButton.addEventListener("click", () => {
   // window.location.reload(true);
 
   if (!imageInput.value) {
-    imageInput.classList.add('red-border');
-    
+    imageInput.classList.add("red-border");
   }
+
+  // let saveButton = document.querySelector(".save-btn");
 
   if (
     userTitle.value.trim() &&
     specification.value.trim() &&
-    imageInput.value
+    imageInput.value &&
+    saveButton.classList.contains("hidden")
   ) {
     let str = imageInput.value;
     let arr = [];
@@ -145,8 +142,7 @@ addButton.addEventListener("click", () => {
     userTitle.value = "";
     specification.value = "";
     imageInput.value = "";
-    imageInput.classList.remove('red-border');
-
+    imageInput.classList.remove("red-border");
   }
 });
 
