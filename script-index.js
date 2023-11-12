@@ -13,9 +13,12 @@ function showProjectItems() {
     
     items.innerHTML += `<div class='latest-projects__items_item'>
       <div>
-        <h3 class='latest-projects__items_item__left_title'>${itemsList[i].title}
+        <h3>${itemsList[i].title}
         </h3>
         <p>${itemsList[i].specification}</p>
+        <button class='button'>
+          Read more
+        </button>
       </div>
       <div>
         

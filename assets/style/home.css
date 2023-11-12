@@ -661,19 +661,38 @@ button {
   font-weight: 500;
   text-align: justify;
   line-height: 1.91;
-  margin: 0.8em 0;
+  margin: 1.67em 0;
+}
+.latest-projects__items_item > div .button {
+  border: none;
+  background-color: #ff6a28;
+  font-size: 0.33em;
+  padding: 0.56em 1.47em;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: scale 0.3s ease;
+  width: -moz-max-content;
+  width: max-content;
+}
+.latest-projects__items_item > div .button:active {
+  scale: 0.95;
 }
 .latest-projects__items_item > div img {
   border-radius: 10.2px;
   -o-object-fit: 100%;
      object-fit: 100%;
   width: 100%;
-  height: clamp(15px, 38vw, 430px);
+  height: clamp(15px, 38vw, 477px);
   justify-self: flex-start;
 }
 
 .latest-projects__items_item:nth-child(even) > div:first-child {
   order: 2;
+}
+.latest-projects__items_item:nth-child(even) > div:first-child .button {
+  margin: 0 0 0 auto;
 }
 
 .latest-projects__items_item:not(:first-child) {

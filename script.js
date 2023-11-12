@@ -170,3 +170,22 @@ addButton.addEventListener("click", () => {
 //       console.log("Storage failed: " + e);
 //   } */
 //  }, false);
+
+let auth = document.querySelector('.authorization');
+let loginButton = document.querySelector('.authorization__form_button');
+let userName = document.querySelector('.authorization__form_login');
+let userPassword = document.querySelector('.authorization__form_password');
+let closeButton = document.querySelector('.dashboard__sections_form_button');
+
+loginButton.addEventListener('click', () => {
+  if (userName.value == 'admin' && userPassword.value == '2495') {
+    auth.style.translate = '-105% 0';
+  }
+})
+
+closeButton.onclick = () => {
+  auth.style.translate = '0'
+  userName.value = '';
+  userPassword.value = '';
+}
+
