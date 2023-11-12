@@ -1,6 +1,6 @@
 .showcase {
   margin-top: clamp(15px,3.33vw,48px);
-  font-size: clamp(32px,4.16vw,60px);
+  font-size: clamp(40px,4.16vw,60px);
   font-family: Poppins;
   margin-bottom: 1.834em;
 
@@ -13,7 +13,7 @@
 
     & > p {
       color: rgba(18, 18, 18, 0.60);
-      font-size: max(14px,.33em);
+      font-size: max(18px,.33em);
       text-align: center;
       margin: 2.1em 0;
 
@@ -31,7 +31,7 @@
   .button {
     border: none;
     background-color: #ff6a28;
-    font-size: .33em;
+    font-size: .38em;
     padding: .56em 1.47em;
     margin: 0 auto;
     font-weight: 600;
