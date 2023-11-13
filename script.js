@@ -177,7 +177,9 @@ let userName = document.querySelector('.authorization__form_login');
 let userPassword = document.querySelector('.authorization__form_password');
 let closeButton = document.querySelector('.dashboard__sections_form_button');
 
-loginButton.addEventListener('click', () => {
+loginButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  // window.location.reload(false);
   if (userName.value == 'admin' && userPassword.value == '2495') {
     auth.style.translate = '-105% 0';
   }
