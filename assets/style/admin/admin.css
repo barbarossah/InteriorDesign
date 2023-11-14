@@ -49,6 +49,32 @@ body {
   justify-content: end;
 }
 
+.formDatas {
+  background: white;
+  display: none;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.formDatas table th {
+  border: 1px solid black;
+  font-size: 20px;
+  padding: 10px 30px;
+}
+.formDatas table :first-child :first-child {
+  border-radius: 8px 0 0 0;
+}
+.formDatas table :first-child :last-child {
+  border-radius: 0 8px 0 0;
+}
+.formDatas table .border {
+  border: 1px solid black;
+  border-radius: 0 !important;
+  text-align: center;
+}
+
 .dashboard__panel {
   display: flex;
   flex-direction: column;

@@ -171,23 +171,73 @@ addButton.addEventListener("click", () => {
 //   } */
 //  }, false);
 
-let auth = document.querySelector('.authorization');
-let loginButton = document.querySelector('.authorization__form_button');
-let userName = document.querySelector('.authorization__form_login');
-let userPassword = document.querySelector('.authorization__form_password');
-let closeButton = document.querySelector('.dashboard__sections_form_button');
+let auth = document.querySelector(".authorization");
+let loginButton = document.querySelector(".authorization__form_button");
+let userName = document.querySelector(".authorization__form_login");
+let userPassword = document.querySelector(".authorization__form_password");
+let closeButton = document.querySelector(".dashboard__sections_form_button");
 
-loginButton.addEventListener('click', (e) => {
+loginButton.addEventListener("click", (e) => {
   e.preventDefault();
   // window.location.reload(false);
-  if (userName.value == 'admin' && userPassword.value == '2495') {
-    auth.style.translate = '-105% 0';
+  if (userName.value == "admin" && userPassword.value == "2495") {
+    auth.style.translate = "-105% 0";
   }
-})
+});
 
 closeButton.onclick = () => {
-  auth.style.translate = '0'
-  userName.value = '';
-  userPassword.value = '';
+  auth.style.translate = "0";
+  userName.value = "";
+  userPassword.value = "";
+};
+
+let dash = document.querySelector(".dashboard__panel");
+let fd = document.querySelector(".formDatas");
+
+function dNone() {
+  dash.style.display = "none";
+  fd.style.display = "flex";
 }
 
+function dBlock() {
+  dash.style.display = "block";
+  fd.style.display = "none";
+}
+
+document.getElementById("fd").addEventListener("click", dNone);
+document.querySelector(".dashboard__sections_item").addEventListener("click", dBlock);
+
+let formData = localStorage.getItem("formData");
+let data = JSON.parse(formData);
+let formTable = document.getElementById("tableData");
+let deleteData = document.querySelector(".deleteForm")
+
+function showTable() {
+  formTable.innerHTML = "";
+  for (let i in data) {
+    formTable.innerHTML += `<tr>
+    <td class='border'>${data[i].name}</td>
+    <td class='border'>${data[i].email}</td>
+    <td class='border'>${data[i].type}</td>
+    <td class='border'>${data[i].comment}</td>
+    <td class='border'><button class="deleteForm" onclick='deleteItem(${i})'>Delete</button></td>
+    </tr>`;
+  }
+}
+
+function deleteItem(id) {
+  data.splice(id, 1);
+  setToForm();
+  showTable();
+}
+
+function setToForm() {
+  localStorage.setItem("localList", JSON.stringify(data));
+}
+
+window.addEventListener('storage', () => {
+  // When local storage changes do something like a refresh
+  window.location.reload(true)
+});
+
+showTable()

@@ -28,3 +28,25 @@ function showProjectItems() {
   }
 
 }
+
+let dataList = []
+
+function formData() {
+  // ev.preventDefault()
+
+  let tName = document.getElementById("name").value
+  let tEmail = document.getElementById("email").value
+  let tType = document.getElementById("type").value
+  let tComment = document.getElementById("us").value
+
+  let data = {
+    name: tName,
+    email: tEmail,
+    type: tType,
+    comment: tComment
+  }
+
+  dataList.push(data)
+
+  localStorage.setItem("formData", JSON.stringify(dataList));
+}
